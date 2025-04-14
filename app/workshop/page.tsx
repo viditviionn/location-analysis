@@ -19,7 +19,7 @@ export default function Workshop() {
   }
 
   return (
-    <div className="flex flex-col h-[455px]  px-4">
+    <div className="flex flex-col h-[480px]  px-4">
         <div className='bg-[#F4F4F5] rounded-[8px] h-full relative'>
 
        

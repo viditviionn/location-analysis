@@ -45,7 +45,7 @@ export default function Settings() {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 p-8">{renderTabContent()}</div>
+      <div className="flex-1">{renderTabContent()}</div>
     </div>
   )
 }

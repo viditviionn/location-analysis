@@ -1,9 +1,13 @@
 // components/Header.tsx
 import Image from 'next/image';
+import { usePathname, useRouter } from 'next/navigation';
 import { FaArrowLeft } from 'react-icons/fa';
 import { FaUserCircle } from 'react-icons/fa';
 
 export default function Header() {
+    const pathName = usePathname()
+    console.log('pathName: ', pathName);
+    const router = useRouter()
   return (
     <div className='px-6 py-4'>
     <button>
@@ -14,10 +18,10 @@ export default function Header() {
       <div className="flex items-center gap-6">
       
         <nav className="flex items-center gap-4 text-sm text-gray-600">
-          <a href="#" className="hover:text-black">Deal Overview</a>
-          <a href="#" className="font-semibold text-black border-b-2 border-black">Workshop</a>
-          <a href="#" className="hover:text-black">Pipeline</a>
-          <a href="#" className="hover:text-black">Settings</a>
+          <button  className={`hover:text-black cursor-pointer ${pathName == "/" ? "font-semibold text-black" : ""}`} onClick={()=>router.push("/")}>Deal Overview</button>
+          <button  className={`hover:text-black cursor-pointer ${pathName == "/workshop" ? "font-semibold text-black" : ""}`}  onClick={()=>router.push("/workshop")}>Workshop</button>
+          <button  className={`hover:text-black cursor-pointer ${pathName == "/pipeline" ? "font-semibold text-black" : ""}`}  onClick={()=>router.push("/pipeline")}>Pipeline</button>
+          <button  className={`hover:text-black cursor-pointer ${pathName == "/settings" ? "font-semibold text-black" : ""}`}  onClick={()=>router.push("/settings")}>Settings</button>
         </nav>
       </div>
 
@@ -38,7 +42,7 @@ export default function Header() {
         </div>
       </div>
     </div>
-        <div className="w-full justify-between flex items-center border-b pb-4">
+        <div className="w-full justify-between flex items-center border-b border-[#E4E4E7] pb-4">
             <div>
                 <h1 className='font-bold text-[24px]'>
                 Deal Overview

@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 /* Tailwind-friendly react-slider styles */
 .custom-slider {
   background-color: #e5e7eb; /* Tailwind: bg-gray-200 */

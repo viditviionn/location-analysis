@@ -36,28 +36,11 @@ export default function DealCriteriaTab() {
     }).format(value)
 
   return (
-    <div className="max-w-3xl px-6 py-6">
+    <div className="max-w-3xl px-6 pb-6">
       <h2 className="text-lg font-semibold mb-1">Deal Screening Parameters</h2>
       <p className="text-sm text-gray-500 mb-4">
         Select the data points that appear on the deal screening page.
       </p>
-
-      {/* NextUI RadioGroup */}
-      {/* <RadioGroup
-        orientation="horizontal"
-        value={selectedPoint}
-        onValueChange={setSelectedPoint}
-        className="grid grid-cols-3 gap-2 border-t border-b py-6 mb-6"
-      >
-        {dataPoints.map((point) => (
-          <Radio key={point} value={point} className="text-sm">
-            {point}
-          </Radio>
-        ))}
-        <Select label="Add Data Point" className="w-full col-span-3 md:col-span-1">
-          <SelectItem key="example">Example Option</SelectItem>
-        </Select>
-      </RadioGroup> */}
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-2 my-4">
   {dataPoints.map((point, i) => (
     <div key={i} className="flex items-center gap-x-2">
@@ -67,7 +50,13 @@ export default function DealCriteriaTab() {
       <div className="text-sm w-fit">{point}</div>
     </div>
   ))}
+  <div className='w-full justify-center flex '>
+          <select className="border rounded px-3 py-2 text-sm w-[200px]">
+            <option>Add Data Point</option>
+          </select>
+        </div>
 </div>
+
       {/* Financial Criteria */}
       <div className=" pt-6">
         <h3 className="text-md font-semibold pb-5 border-b">Financial Criteria</h3>
