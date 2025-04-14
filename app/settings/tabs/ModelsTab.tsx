@@ -23,7 +23,7 @@ export default function ModelsTab() {
   }
 
   return (
-    <div>
+    <div className='pt-2'>
     <div className='pb-2 border-b w-fit mb-4'>
 
     <h2 className="text-xl font-semibold mb-1">Models</h2>
