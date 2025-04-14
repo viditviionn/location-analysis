@@ -1,2 +1,26 @@
 @import "tailwindcss";
 
+/* Tailwind-friendly react-slider styles */
+.custom-slider {
+  background-color: #e5e7eb; /* Tailwind: bg-gray-200 */
+  position: relative;
+  border-radius: 4px;
+}
+
+.custom-track {
+  top: 0;
+  bottom: 0;
+  background-color: black; /* filled track */
+  border-radius: 4px;
+}
+
+.custom-thumb {
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 9999px;
+  cursor: grab;
+  top: -7px;
+  position: relative;
+}
