@@ -36,12 +36,12 @@ export default function DealCriteriaTab() {
     }).format(value)
 
   return (
-    <div className="max-w-3xl px-6 pb-6">
+    <div className="max-w-3xl px-6 pb-6 pt-2">
       <h2 className="text-lg font-semibold mb-1">Deal Screening Parameters</h2>
-      <p className="text-sm text-gray-500 mb-4">
+      <p className="text-sm text-gray-500 mb-4 border-b border-[#E4E4E7] pb-5">
         Select the data points that appear on the deal screening page.
       </p>
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-2 my-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-2 my-5">
   {dataPoints.map((point, i) => (
     <div key={i} className="flex items-center gap-x-2">
       <div className="w-5 h-5 border-2  rounded-full flex items-center justify-center">
@@ -58,8 +58,8 @@ export default function DealCriteriaTab() {
 </div>
 
       {/* Financial Criteria */}
-      <div className=" pt-6">
-        <h3 className="text-md font-semibold pb-5 border-b">Financial Criteria</h3>
+      <div className="">
+        <h3 className="text-md font-semibold pb-5 border-b border-[#E4E4E7]">Financial Criteria</h3>
 
         <label className="block text-sm mt-5 mb-2">Target IRR</label>
         <input

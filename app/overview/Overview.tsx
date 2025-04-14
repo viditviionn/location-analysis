@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Overview = () => {
   return (
-    <div className="bg-white rounded-xl shadow-md p-6 w-full max-w-6xl mx-auto space-y-6">
+    <div className="bg-white rounded-xl shadow-md p-6 w-full  mx-auto space-y-6">
       {/* Header Section - Image + Title + Buttons + Info Row */}
       <div className="flex flex-col lg:flex-row gap-6 items-start">
         {/* Left Image + Link */}

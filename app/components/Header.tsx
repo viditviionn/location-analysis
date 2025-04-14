@@ -8,6 +8,14 @@ export default function Header() {
     const pathName = usePathname()
     console.log('pathName: ', pathName);
     const router = useRouter()
+    const pageTitleMap: Record<string, string> = {
+        '/': 'Deal Overview',
+        '/workshop': 'Deal Workshop',
+        '/pipeline': 'Deal Pipeline',
+        '/settings': 'Settings',
+      }
+    
+      const title = pageTitleMap[pathName] || 'Dashboard'
   return (
     <div className='px-6 py-4'>
     <button>
@@ -45,8 +53,15 @@ export default function Header() {
         <div className="w-full justify-between flex items-center border-b border-[#E4E4E7] pb-4">
             <div>
                 <h1 className='font-bold text-[24px]'>
-                Deal Overview
+                {title}
+
                 </h1>
+                    
+                    <p className='text-base text-[#71717A]'> {
+                    pathName == "/settings" ?
+                "Manage your account settings and set deal criteria." : pathName == "/workshop" ?  "280 Richards, Brooklyn, NYC" : ""}
+</p>
+                
             </div>
             <div className='text-center'>
           <div className="text-[18px] font-medium">Underwriting Model</div>
