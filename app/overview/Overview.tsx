@@ -5,6 +5,7 @@ import { PiRulerLight } from "react-icons/pi";
 import { IoMdQrScanner } from "react-icons/io";
 import { IoHammerOutline } from "react-icons/io5";
 import { FaRegBuilding } from "react-icons/fa";
+import DealOverviewMetrics, { PipelineComparables } from "./DealOverviewMetrics";
 
 const Overview = () => {
   return (
@@ -191,6 +192,8 @@ const Overview = () => {
           </div>
         </div>
       </div>
+           <DealOverviewMetrics/> 
+           <PipelineComparables/>
     </div>
   );
 };
