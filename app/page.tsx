@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Workshop from "./workshop/page";
 import Pipeline from "./pipeline/page";
 import Settings from "./settings/page";
+import Overview from "./Overview";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       {/* <Workshop/> */}
       {/* <Pipeline/> */}
       <Settings/>
+      <Overview />
     </div>
   );
 }
