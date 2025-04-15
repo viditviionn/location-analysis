@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 /* Tailwind-friendly react-slider styles */
 .custom-slider {
   background-color: #e5e7eb; /* Tailwind: bg-gray-200 */
@@ -24,4 +23,11 @@
   cursor: grab;
   top: -7px;
   position: relative;
+}
+
+canvas{
+    width: 100% !important;
+    margin: auto !important;
+    height: 163px !important; 
+    object-fit: fill !important;
 }
